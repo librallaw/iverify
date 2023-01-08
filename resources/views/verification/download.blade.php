@@ -141,7 +141,7 @@
 <div class="id-card-holder">
     <div class="id-card">
         <div class="header" style="height: 40px;">
-            <h2>Essy Verify </h2>
+            <h2>Easy Verify </h2>
         </div>
         <div class="photo">
             <img src="data:image/png;base64, {{$data->photo}}">
