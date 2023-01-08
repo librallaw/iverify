@@ -141,7 +141,7 @@
 <div class="id-card-holder">
     <div class="id-card">
         <div class="header" style="height: 40px;">
-            <h2>Confirm ID</h2>
+            <h2>Essy Verify </h2>
         </div>
         <div class="photo">
             <img src="data:image/png;base64, {{$data->photo}}">
@@ -154,7 +154,7 @@
         <h3>Tracking id: {{$data->trackingId}}</h3>
         <br />
 
-        <h3>www.easyverify.com</h3>
+        <h3>www.easyverify.ng</h3>
         <hr>
         <p><strong>Info:</strong>Property of the National Identity Management commission <p>
 
