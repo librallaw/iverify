@@ -1,7 +1,7 @@
 <div class="sidebar" data-color="purple" data-background-color="white" data-image="/assets/img/sidebar-1.jpg">
 
-    <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            Confirm IDs
+    <div class="logo"><a href="/dashboard" class="simple-text logo-normal">
+            Easy Verify
         </a></div>
     <div class="sidebar-wrapper">
         <ul class="nav">
@@ -11,12 +11,26 @@
                     <p>Dashboard</p>
                 </a>
             </li>
+
+            @if(Auth::user()->level == 1)
+            <li class="nav-item  @if(isset($active)) @if($active == "users")active @endif  @endif  ">
+                <a class="nav-link" href="{{route("allUsers")}}">
+                    <i class="fa fa-users"></i>
+                    <p>All Users</p>
+                </a>
+            </li>
+
+            @endif
+
+
             <li class="nav-item  @if(isset($active)) @if($active == "verify")active @endif  @endif  ">
                 <a class="nav-link" href="{{route("loadVerification")}}">
                     <i class="material-icons">person</i>
                     <p>Verify</p>
                 </a>
             </li>
+
+
 
             <li class="nav-item @if(isset($active)) @if($active == "logs")active @endif  @endif ">
                 <a class="nav-link" href="{{route("showLog")}}">

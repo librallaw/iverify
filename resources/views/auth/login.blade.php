@@ -56,7 +56,7 @@
                     </div>
                     <div class="card-body">
                         @include("alert")
-                        <form role="form" method="post" class="text-start">
+                        <form role="form" method="post" action="/login" class="text-start">
                             @csrf
                             <div class="input-group input-group-outline my-3">
                                 <label class="form-label">Username / Email</label>

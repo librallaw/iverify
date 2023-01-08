@@ -31,7 +31,23 @@ Route::post('/register',[\App\Http\Controllers\AuthController::class,'doRegister
 
 Route::group(['middleware'=>'auth'], function () {
 
-Route::get("/dashboard",[\App\Http\Controllers\DashboardController::class,'showDashboard']) -> name("showDashboard");
+    Route::post('/search', '\App\Http\Controllers\SearchController@search')->name("search");
+
+
+    Route::get("/dashboard",[\App\Http\Controllers\DashboardController::class,'showDashboard']) -> name("showDashboard");
+
+Route::get("/users/all",[\App\Http\Controllers\UsersController::class,'allUsers']) -> name("allUsers");
+Route::get("/users/view/{id}",[\App\Http\Controllers\UsersController::class,'showUser']) -> name("showUser");
+
+Route::post("/users/edit/",[\App\Http\Controllers\UsersController::class,'doEditUser']) -> name("doEditUser");
+
+Route::get("/users/log/{id}",[\App\Http\Controllers\UsersController::class,'doEditUserLog']) -> name("doEditUserLog");
+
+Route::get('/users/activate/{orgid}', '\App\Http\Controllers\UsersController@ActivateOrganisation')->name('ActivateOrganisation');
+
+Route::post("/users/credit/",[\App\Http\Controllers\UsersController::class,'doCreditWallet']) -> name("doCreditWallet");
+Route::post("/users/withdraw/",[\App\Http\Controllers\UsersController::class,'doWithdrawWallet']) -> name("doWithdrawWallet");
+
 
 Route::get("/verify",[\App\Http\Controllers\VerificationController::class,'loadVerification']) -> name("loadVerification");
 Route::post("/verify",[\App\Http\Controllers\VerificationController::class,'DoLoadVerification']) -> name("DoLoadVerification");

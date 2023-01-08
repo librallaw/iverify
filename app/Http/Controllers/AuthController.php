@@ -66,6 +66,8 @@ class AuthController extends Controller
         ]);
 
 
+       // dd("I got here");
+
 
         $fieldType = filter_var($request->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'unique_id';
 

@@ -154,10 +154,10 @@
         <h3>Tracking id: {{$data->trackingId}}</h3>
         <br />
 
-        <h3>www.confirmids.com</h3>
+        <h3>www.easyverify.com</h3>
         <hr>
         <p><strong>Info:</strong>Property of the National Identity Management commission <p>
-        <p>Ph: 9446062493 | Email: info@confirmids.com</p>
+
 
     </div>
 </div>
