@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Libraries\Messenger;
+use App\Models\Wallet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 use Spipu\Html2Pdf\Html2Pdf;
 use PDF;
 
@@ -76,24 +79,38 @@ class PdfController extends Controller
         ]);
 
 
-        $datar  = json_decode($_POST['data']);
+        $balance =  Wallet::where("unique_id", Auth::user()->unique_id)->first()->balance;
 
 
-        $birthdate = ($datar->birthdate ? $datar->birthdate: "");
-        $firstname = ($datar->firstname ? $datar->firstname: "");
-        $middlename = ($datar->middlename ? $datar->middlename: "");
-        $surname = ($datar->surname ? $datar->surname: "");
-        $photo = ($datar->photo ? $datar->photo: "");
-        $gender = ($datar->gender ? strtoupper($datar->gender): "");
-        $nin = ($datar->nin ? $datar->nin: "");
+        if($balance > 1){
+            $datar  = json_decode($_POST['data']);
 
 
-        $data['data']=  json_decode($_POST['data']);
+            $birthdate = ($datar->birthdate ? $datar->birthdate: "");
+            $firstname = ($datar->firstname ? $datar->firstname: "");
+            $middlename = ($datar->middlename ? $datar->middlename: "");
+            $surname = ($datar->surname ? $datar->surname: "");
+            $photo = ($datar->photo ? $datar->photo: "");
+            $gender = ($datar->gender ? strtoupper($datar->gender): "");
+            $nin = ($datar->nin ? $datar->nin: "");
 
 
-        $pdf = PDF::loadView('verification.slip', $data);
+            $data['data']=  json_decode($_POST['data']);
 
-        return $pdf->download($surname."-".$firstname.'.pdf');
+
+            $pdf = PDF::loadView('verification.slip', $data);
+
+            return $pdf->download($surname."-".$firstname.'.pdf');
+
+        }else{
+
+            return Redirect::route("loadVerification")->with("message","Insufficient credit")->with("type","danger");
+        }
+
+
+
+
+
 
 
 
