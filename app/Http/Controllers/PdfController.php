@@ -83,6 +83,13 @@ class PdfController extends Controller
 
 
         if($balance > 1){
+
+
+            $balance = $balance -1;
+            $balance ->save();
+
+
+
             $datar  = json_decode($_POST['data']);
 
 
