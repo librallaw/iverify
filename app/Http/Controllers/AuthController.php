@@ -22,8 +22,8 @@ class AuthController extends Controller
 
         $request -> validate([
             'name' => 'required',
-            'email' => 'required',
-            'username' => 'required',
+            'email' => 'required|unique:users',
+            'username' => 'required|unique:users',
             'password' => 'required',
             'phone' => 'required',
         ]);
@@ -126,9 +126,9 @@ class AuthController extends Controller
 
         $request -> validate([
             'name'     => 'required',
-            'email'  => 'required',
-            'username'  => 'required',
-            'phone'  => 'required',
+            'email'  => 'required|unique:users',
+            'username'  => 'required|unique:users',
+            'phone'  => 'required|unique:users',
             'confirm_password'  => 'required',
             'password'  => 'required|same:confirm_password'
         ]);
