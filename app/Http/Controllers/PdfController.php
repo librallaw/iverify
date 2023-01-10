@@ -84,9 +84,10 @@ class PdfController extends Controller
 
         if($balance > 1){
 
+            $balance2 = Wallet::where("unique_id", Auth::user()->unique_id)->first();
 
-            $balance = $balance -1;
-            $balance ->save();
+            $balance2 = $balance -1;
+            $balance2 ->save();
 
 
 
