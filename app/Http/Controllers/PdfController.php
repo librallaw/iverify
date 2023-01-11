@@ -95,10 +95,22 @@ class PdfController extends Controller
             $datar  = json_decode($_POST['data']);
 
 
-            dd($datar);
+           // dd($datar);
 
-            $birthdate = ($datar->birthdate ? $datar->birthdate: "");
-            $firstname = ($datar->firstname ? $datar->firstname: "");
+            if(isset($datar->birthdate)){
+                $birthdate = $datar->birthdate;
+            } else {
+
+                $birthdate = "****";
+            }
+
+            if(isset($datar->firstname)){
+                $firstname = $datar->firstname;
+            } else {
+
+                $firstname = "****";
+            }
+
 
             if(isset($datar->middlename)){
                 $middlename = $datar->middlename;
@@ -107,7 +119,13 @@ class PdfController extends Controller
                 $middlename = "****";
             }
 
-            $surname = ($datar->surname ? $datar->surname: "");
+            if(isset($datar->surname)){
+                $surname = $datar->surname;
+            } else {
+
+                $surname = "****";
+            }
+
             $photo = ($datar->photo ? $datar->photo: "");
             $gender = ($datar->gender ? strtoupper($datar->gender): "");
             $nin = ($datar->nin ? $datar->nin: "");
@@ -148,13 +166,20 @@ class PdfController extends Controller
         $datar  = json_decode($_POST['data']);
 
 
-        $birthdate = ($datar->birthdate ? $datar->birthdate: "");
-        $firstname = ($datar->firstname ? $datar->firstname: "");
+        if(isset($datar->birthdate)){
+            $birthdate = $datar->birthdate;
+        } else {
 
-       // dd($datar);
+            $birthdate = "****";
+        }
 
-        $birthdate = ($datar->birthdate ? $datar->birthdate: "");
-        $firstname = ($datar->firstname ? $datar->firstname: "");
+        if(isset($datar->firstname)){
+            $firstname = $datar->firstname;
+        } else {
+
+            $firstname = "****";
+        }
+
 
         if(isset($datar->middlename)){
             $middlename = $datar->middlename;
@@ -163,7 +188,13 @@ class PdfController extends Controller
             $middlename = "****";
         }
 
-        $surname = ($datar->surname ? $datar->surname: "");
+        if(isset($datar->surname)){
+            $surname = $datar->surname;
+        } else {
+
+            $surname = "****";
+        }
+
         $photo = ($datar->photo ? $datar->photo: "");
         $gender = ($datar->gender ? strtoupper($datar->gender): "");
         $nin = ($datar->nin ? $datar->nin: "");
