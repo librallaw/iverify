@@ -83,6 +83,7 @@
                                     <div class="row">
 
 
+
                                         @foreach($userdata as $key => $value)
                                             @if($key == "photo" || $key == "signature")
                                                 <?php continue; ?>
@@ -92,7 +93,10 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group bmd-form-group">
                                                             <label class="bmd-label-floating">{{$key}}</label>
+                                                            @if(is_object($value))
+                                                                @else
                                                             <input type="text" class="form-control" value="{{$value[0]}}" disabled="">
+                                                                @endif
                                                         </div>
                                                     </div>
 
@@ -101,7 +105,10 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group bmd-form-group">
                                                             <label class="bmd-label-floating">{{$key}}</label>
+                                                            @if(is_object($value))
+                                                            @else
                                                             <input type="text" class="form-control" value="{{$value}}" disabled="">
+                                                                @endif
                                                         </div>
                                                     </div>
 
