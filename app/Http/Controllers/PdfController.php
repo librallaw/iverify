@@ -95,9 +95,18 @@ class PdfController extends Controller
             $datar  = json_decode($_POST['data']);
 
 
+            dd($datar);
+
             $birthdate = ($datar->birthdate ? $datar->birthdate: "");
             $firstname = ($datar->firstname ? $datar->firstname: "");
-            $middlename = ($datar->middlename ? $datar->middlename: "");
+
+            if(isset($datar->middlename)){
+                $middlename = $datar->middlename;
+            } else {
+
+                $middlename = "****";
+            }
+
             $surname = ($datar->surname ? $datar->surname: "");
             $photo = ($datar->photo ? $datar->photo: "");
             $gender = ($datar->gender ? strtoupper($datar->gender): "");
@@ -141,7 +150,19 @@ class PdfController extends Controller
 
         $birthdate = ($datar->birthdate ? $datar->birthdate: "");
         $firstname = ($datar->firstname ? $datar->firstname: "");
-        $middlename = ($datar->middlename ? $datar->middlename: "");
+
+       // dd($datar);
+
+        $birthdate = ($datar->birthdate ? $datar->birthdate: "");
+        $firstname = ($datar->firstname ? $datar->firstname: "");
+
+        if(isset($datar->middlename)){
+            $middlename = $datar->middlename;
+        } else {
+
+            $middlename = "****";
+        }
+
         $surname = ($datar->surname ? $datar->surname: "");
         $photo = ($datar->photo ? $datar->photo: "");
         $gender = ($datar->gender ? strtoupper($datar->gender): "");
