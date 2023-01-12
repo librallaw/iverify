@@ -147,7 +147,7 @@
             <img src="data:image/png;base64, {{$data->photo}}">
         </div>
         <br />
-        <h2>{{$data->surname}} {{$data->firstname}} <br />{{$data->middlename}}</h2>
+        <h2>@if(isset($data->surname)){{$data->surname}}@endif @if(isset($data->firstname)){{$data->firstname}}@endif <br />@if(isset($data->middlename)){{$data->middlename}}@endif</h2>
         <h3>NIN: {{$data->nin}}</h3>
         <h3>DOB: {{$data->birthdate}}</h3>
         <br />
