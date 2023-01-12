@@ -84,6 +84,7 @@
 
 
 
+
                                         @foreach($userdata as $key => $value)
                                             @if($key == "photo" || $key == "signature")
                                                 <?php continue; ?>
@@ -140,9 +141,14 @@
                             <div class="card-avatar">
 
                                 <a href="#">
+                                    @if(is_object($userdata->photo))
+
+                                        @else
                                     @if(isset($userdata->photo))
                                         <img class="img" src="data:image/png;base64, {{$userdata->photo}}"  style="width:100%">
                                     @endif
+                                    @endif
+
 
                                 </a>
                             </div>
