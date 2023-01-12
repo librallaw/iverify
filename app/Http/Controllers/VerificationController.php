@@ -127,11 +127,7 @@ class VerificationController extends Controller
 
 
 
-                if(isset($data->data->data)){
 
-                    $walletBalance->balance = $walletBalance->balance - 1;
-                    $walletBalance->save();
-                }
 
 
 
@@ -140,6 +136,9 @@ class VerificationController extends Controller
 
 
                 if($data->status){
+
+                    $walletBalance->balance = $walletBalance->balance - 1;
+                    $walletBalance->save();
 
 
                     $log = new Accountlog();
