@@ -147,7 +147,7 @@
             <img src="data:image/png;base64, {{$data->photo}}">
         </div>
         <br />
-        <h2>{{$data->surname}} {{$data->firstname}}</h2>
+        <h2>{{$data->surname}} {{$data->middlename}} {{$data->firstname}}</h2>
         <h3>NIN: {{$data->nin}}</h3>
         <h3>DOB: {{$data->birthdate}}</h3>
         <br />
