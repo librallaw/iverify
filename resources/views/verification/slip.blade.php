@@ -130,7 +130,7 @@
         <span class="value">
               @isset($data->middlename)
 
-                @if(is_object($datar->middlename))
+                @if(is_object($data->middlename))
                   @php $middlename =    " *** "; @endphp
                 @else
                   @php $middlename = $data->middlename; @endphp
