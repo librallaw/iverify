@@ -85,6 +85,7 @@
 
 
 
+
                                         @foreach($userdata as $key => $value)
                                             @if($key == "photo" || $key == "signature")
                                                 <?php continue; ?>
@@ -93,7 +94,11 @@
 
                                                     <div class="col-md-4">
                                                         <div class="form-group bmd-form-group">
-                                                            <label class="bmd-label-floating">{{$key}}</label>
+                                                            @if(is_object($key))
+                                                                <label class="bmd-label-floating">{{"***"}}</label>
+                                                            @else
+                                                                <label class="bmd-label-floating">{{$key}}</label>
+                                                            @endif
                                                             @if(is_object($value))
                                                                 @else
                                                             <input type="text" class="form-control" value="{{$value[0]}}" disabled="">
@@ -104,9 +109,15 @@
                                                 @else
 
                                                     <div class="col-md-4">
+
                                                         <div class="form-group bmd-form-group">
-                                                            <label class="bmd-label-floating">{{$key}}</label>
+                                                            @if(is_object($key))
+                                                            <label class="bmd-label-floating">{{"***"}}</label>
+                                                                @else
+                                                                <label class="bmd-label-floating">{{$key}}</label>
+                                                            @endif
                                                             @if(is_object($value))
+
                                                             @else
                                                             <input type="text" class="form-control" value="{{$value}}" disabled="">
                                                                 @endif
@@ -154,9 +165,15 @@
                             </div>
                             <div class="card-body">
                                 <h6 class="card-category text-gray">  @if(isset($userdata->nin)) {{$userdata->nin}} @endif</h6>
-                                <h4 class="card-title"> @if(isset($userdata->surname)) {{$userdata->surname}}  @endif  @if(isset($userdata->firstname)) {{$userdata->firstname}}  @endif</h4>
+                                <h4 class="card-title"> @if(is_object($userdata->birthdate)) @else @if(isset($userdata->surname)) {{$userdata->surname}}  @endif @endif @if(is_object($userdata->firstname)) @else @if(isset($userdata->firstname)) {{$userdata->firstname}}  @endif @endif</h4>
                                 <p class="card-description">
-                                    @if(isset($userdata->birthdate)) {{$userdata->birthdate}} @endif
+                                    @if(is_object($userdata->birthdate))
+                                        ****
+                                    @else
+                                        @if(isset($userdata->birthdate))
+                                            {{$userdata->birthdate}}
+                                        @endif
+                                    @endif
                                 </p>
                                 <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal">Print Premium Slip</a>
 
