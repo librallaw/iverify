@@ -111,13 +111,32 @@
         <span class="title"><b>Surname:</b></span> <span class="value">{{$data->surname}}</span>
       </div>
       <div class="title-div">
-        <span class="title"><b>First name:</b></span> <span class="value">{{$data->firstname}}</span>
+        <span class="title"><b>First name:</b></span> <span class="value">
+           @isset($data->firstname)
+
+            @if(is_object($data->firstname))
+              @php $firstname =    " *** "; @endphp
+            @else
+              @php $firstname = $data->firstname; @endphp
+            @endif
+
+            {{$firstname}}
+          @endisset
+
+        </span>
       </div>
       <div class="title-div">
         <span class="title"><b>Middle name:</b></span>
         <span class="value">
               @isset($data->middlename)
-            {{ $data->middlename }}
+
+                @if(is_object($datar->middlename))
+                  @php $middlename =    " *** "; @endphp
+                @else
+                  @php $middlename = $data->middlename; @endphp
+                @endif
+
+            {{$middlename}}
           @endisset
             </span>
       </div>

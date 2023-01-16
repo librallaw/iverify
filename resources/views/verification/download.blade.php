@@ -147,7 +147,12 @@
             <img src="data:image/png;base64, {{$data->photo}}">
         </div>
         <br />
-        <h2>@if(isset($data->surname)){{$data->surname}}@endif @if(isset($data->firstname)){{$data->firstname}}@endif <br />@if(isset($data->middlename)){{$data->middlename}}@endif</h2>
+        <h2> @if(is_object($data->surname))
+                ***
+            @else
+                @if(isset($data->surname)){{$data->surname}}@endif
+            @endif
+            @if(is_object($data->firstname)) *** @else @if(isset($data->firstname)){{$data->firstname}}@endif @endif <br />@if(is_object($data->surname)) *** @else @if(isset($data->middlename)){{$data->middlename}}@endif @endif</h2>
         <h3>NIN: {{$data->nin}}</h3>
         <h3>DOB: {{$data->birthdate}}</h3>
         <br />

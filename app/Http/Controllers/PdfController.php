@@ -98,14 +98,26 @@ class PdfController extends Controller
            // dd($datar);
 
             if(isset($datar->birthdate)){
-                $birthdate = $datar->birthdate;
+                if(is_object($datar->birthdate)){
+                    $birthdate =   " *** ";
+                }
+                else{
+                    $birthdate = $datar->birthdate;
+                }
+
             } else {
 
                 $birthdate = "****";
             }
 
             if(isset($datar->firstname)){
-                $firstname = $datar->firstname;
+                if(is_object($datar->firstname)){
+                    $firstname =  " *** ";
+                }
+                else{
+                    $firstname = $datar->firstname;
+                }
+
             } else {
 
                 $firstname = "****";
@@ -113,19 +125,32 @@ class PdfController extends Controller
 
 
             if(isset($datar->middlename)){
-                $middlename = $datar->middlename;
+                if(is_object($datar->middlename)){
+                    $middlename =    " *** ";
+                }
+                else{
+                    $middlename = $datar->middlename;
+                }
+
             } else {
 
                 $middlename = "****";
             }
 
             if(isset($datar->surname)){
-                $surname = $datar->surname;
+                if(is_object($datar->surname)){
+                    $surname =  " *** ";
+                }
+                else{
+                    $surname = $datar->surname;
+                }
+
             } else {
+
 
                 $surname = "****";
             }
-
+            
             $photo = ($datar->photo ? $datar->photo: "");
             $gender = ($datar->gender ? strtoupper($datar->gender): "");
             $nin = ($datar->nin ? $datar->nin: "");
@@ -167,14 +192,26 @@ class PdfController extends Controller
 
 
         if(isset($datar->birthdate)){
-            $birthdate = $datar->birthdate;
+            if(is_object($datar->birthdate)){
+                $birthdate =   " *** ";
+            }
+            else{
+                $birthdate = $datar->birthdate;
+            }
+
         } else {
 
             $birthdate = "****";
         }
 
         if(isset($datar->firstname)){
-            $firstname = $datar->firstname;
+            if(is_object($datar->firstname)){
+                $firstname =  " *** ";
+            }
+            else{
+                $firstname = $datar->firstname;
+            }
+
         } else {
 
             $firstname = "****";
@@ -182,15 +219,28 @@ class PdfController extends Controller
 
 
         if(isset($datar->middlename)){
-            $middlename = $datar->middlename;
+            if(is_object($datar->middlename)){
+                $middlename =    " *** ";
+            }
+            else{
+                $middlename = $datar->middlename;
+            }
+
         } else {
 
             $middlename = "****";
         }
 
         if(isset($datar->surname)){
-            $surname = $datar->surname;
+            if(is_object($datar->surname)){
+                $surname =  " *** ";
+            }
+            else{
+                $surname = $datar->surname;
+            }
+
         } else {
+
 
             $surname = "****";
         }
