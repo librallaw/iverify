@@ -606,5 +606,31 @@ nDcZ96ZS4kn0YZYb6xOYltRFsOlfhhdK+uN3yqx5dTOEywMTq6y0
     }
 
 
+    public function TopLog()
+    {
+
+        $data['active'] = 'topup';
+
+
+        $data['recents'] =  Accountlog::where("trigger",Auth::user()->unique_id)->where("action","Credit Wallet")->orderBy("id","desc")->paginate(20);
+
+        return view("verification.toplogs",$data);
+
+    }
+
+
+    public function ShowTopLog($id)
+    {
+
+        $data['active'] = 'topup';
+
+
+        $data['recents'] =  Accountlog::where("trigger",$id)->where("action","Credit Wallet")->orderBy("id","desc")->paginate(20);
+
+        return view("verification.toplogs",$data);
+
+    }
+
+
 
 }

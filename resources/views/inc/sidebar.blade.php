@@ -38,6 +38,13 @@
                     <p>logs</p>
                 </a>
             </li>
+
+            <li class="nav-item @if(isset($active)) @if($active == "topup")active @endif  @endif ">
+                <a class="nav-link" href="{{route("TopLog")}}">
+                    <i class="material-icons">location_ons</i>
+                    <p>Top Up logs</p>
+                </a>
+            </li>
             <li class="nav-item @if(isset($active)) @if($active == "settings")active @endif  @endif  ">
                 <a class="nav-link" href="{{route("changePassword")}}">
                     <i class="material-icons">settings</i>

@@ -52,7 +52,11 @@ Route::post("/users/withdraw/",[\App\Http\Controllers\UsersController::class,'do
 Route::get("/verify",[\App\Http\Controllers\VerificationController::class,'loadVerification']) -> name("loadVerification");
 Route::post("/verify",[\App\Http\Controllers\VerificationController::class,'DoLoadVerification']) -> name("DoLoadVerification");
 Route::post("/verify/demo",[\App\Http\Controllers\VerificationController::class,'DoLoadVerificationDemo']) -> name("DoLoadVerificationDemo");
+
 Route::get("/verify/logs",[\App\Http\Controllers\VerificationController::class,'showLog']) -> name("showLog");
+Route::get("/topup/logs",[\App\Http\Controllers\VerificationController::class,'TopLog']) -> name("TopLog");
+Route::get("/admin/topup/logs/{id}",[\App\Http\Controllers\VerificationController::class,'ShowTopLog']) -> name("ShowTopLog");
+
 Route::post('/pdf/slip', '\App\Http\Controllers\PdfController@printSlip')->name("printSlip");
 Route::post('/pdf/data', '\App\Http\Controllers\PdfController@downloadData')->name("downloadData");
 

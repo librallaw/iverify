@@ -100,7 +100,7 @@
                         </h4>
 
 {{--                        <a href="{{route("showAccountVerfiyLog",['user'=> $user->unique_id])}}"><button class="btn btn-dribbble">Verification logs</button></a>--}}
-{{--                        <a href="{{route("showTopUpLog",['user'=> $user->unique_id])}}"><button class="btn btn-dribbble">Top Ups</button></a>--}}
+                        <a href="{{route("ShowTopLog",['id'=> $user->unique_id])}}"><button class="btn btn-dribbble">Top Ups</button></a>
 
 
                     </div>
