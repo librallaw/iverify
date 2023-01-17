@@ -81,34 +81,35 @@
                             </div>
                             <nav class="card-body table-responsive">
 
-                                @if(count($sales) > 0)
-
-                                    <div>Revenue  = #{{number_format($total * 170)}}</div>
+                                @if(count($recents) > 0)
                                 <table class="table table-hover">
                                     <thead class="text-warning">
                                     <th>ID</th>
-                                    <th>User</th>
+                                    <th>Action</th>
                                     <th>Response/Request</th>
+                                    <th>status</th>
                                     <th>Time</th>
                                     </thead>
                                     <tbody>
                                     @php $x = 1; @endphp
-                                    @foreach($sales as $sale)
+                                    @foreach($recents as $recent)
                                         <tr>
                                             <td>{{$x++}}</td>
-                                            <td>{{$sale->receiver_id}}</td>
-                                            <td>{{$sale->amount}}</td>
-
-                                            <td>{{$sale->created_at->diffForHumans()}}</td>
+                                            <td>{{$recent->action}}</td>
+                                            <td>{{$recent->message}}</td>
+                                            <td><div class="alert alert-{{($recent->status?"success":"danger")}}" >{{($recent->status?"Sucess":"Failed")}}</div></td>
+                                            <td>{{$recent->created_at->diffForHumans()}}</td>
                                         </tr>
                                     @endforeach
 
                                     </tbody>
                                 </table>
 
-                                    <div>Revenue  = #{{number_format($total * 170)}}</div>
-
-
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                    {{$recents -> links()}}
+                                        </ul>
+                                     </nav>
 
                                     @endif
                             </div>

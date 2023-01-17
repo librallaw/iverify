@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Libraries\Messenger;
 use App\Models\Accountlog;
+use App\Models\Credit;
 use App\Models\User;
 use App\Models\Wallet;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Request;
@@ -628,6 +630,34 @@ nDcZ96ZS4kn0YZYb6xOYltRFsOlfhhdK+uN3yqx5dTOEywMTq6y0
         $data['recents'] =  Accountlog::where("trigger",$id)->where("action","Credit Wallet")->orderBy("id","desc")->paginate(20);
 
         return view("verification.toplogs",$data);
+
+    }
+
+
+    public function sales()
+    {
+
+
+        if(isset($_GET['option'])){
+
+            $option  = $_GET['option'];
+
+            if($option == "yesterday"){
+                $data['sales'] = Credit::whereDate('created_at', Carbon::now()->addDay(-1))->get();
+                $data['total'] = Credit::whereDate('created_at', Carbon::now()->addDay(-1))->sum('amount');
+            }
+
+        }else{
+
+            $data['sales'] = Credit::whereDate('created_at', Carbon::today())->get();
+            $data['total'] = Credit::whereDate('created_at', Carbon::today())->sum('amount');
+        }
+
+
+        $data['active'] =  "sales";
+
+        return view("verification.toplogs",$data);
+
 
     }
 

@@ -19,6 +19,12 @@
                     <p>All Users</p>
                 </a>
             </li>
+                <li class="nav-item  @if(isset($active)) @if($active == "sales")active @endif  @endif  ">
+                <a class="nav-link" href="{{route("sales")}}">
+                    <i class="fa fa-money"></i>
+                    <p>Sales</p>
+                </a>
+            </li>
 
             @endif
 
