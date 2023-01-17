@@ -83,7 +83,7 @@
 
                                 @if(count($sales) > 0)
 
-                                    <div>Revenue  = #{{number_format($total * 170)}}</div>
+                                    <div>Total  = {{number_format($total)}}</div>
                                 <table class="table table-hover">
                                     <thead class="text-warning">
                                     <th>ID</th>
@@ -106,7 +106,7 @@
                                     </tbody>
                                 </table>
 
-                                    <div>Revenue  = #{{number_format($total * 170)}}</div>
+                                    <div>total  = {{number_format($total)}}</div>
 
 
 
