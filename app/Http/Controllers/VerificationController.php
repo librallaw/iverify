@@ -656,7 +656,7 @@ nDcZ96ZS4kn0YZYb6xOYltRFsOlfhhdK+uN3yqx5dTOEywMTq6y0
 
         $data['active'] =  "sales";
 
-        return view("verification.toplogs",$data);
+        return view("verification.sales",$data);
 
 
     }

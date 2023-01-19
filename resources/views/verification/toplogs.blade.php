@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +6,7 @@
     <link rel="icon" type="image/png" href="/assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-      I verify
+        I verify
     </title>
     <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 
@@ -30,7 +28,7 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="wrapper ">
-@include("inc.sidebar")
+    @include("inc.sidebar")
 
     <div class="main-panel">
 
@@ -58,7 +56,7 @@
                                 </p>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-                               
+
                                 <a class="dropdown-item" href="#">Settings</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Log out</a>
@@ -77,59 +75,60 @@
                         <div class="card">
                             <div class="card-header card-header-warning">
                                 <h4 class="card-title">Top Up Logs</h4>
-                                
+
                             </div>
                             <nav class="card-body table-responsive">
 
-                                @if(count($sales) > 0)
+                                @if(count($recents) > 0)
+                                    <table class="table table-hover">
+                                        <thead class="text-warning">
+                                        <th>ID</th>
+                                        <th>Action</th>
+                                        <th>Response/Request</th>
+                                        <th>status</th>
+                                        <th>Time</th>
+                                        </thead>
+                                        <tbody>
+                                        @php $x = 1; @endphp
+                                        @foreach($recents as $recent)
+                                            <tr>
+                                                <td>{{$x++}}</td>
+                                                <td>{{$recent->action}}</td>
+                                                <td>{{$recent->message}}</td>
+                                                <td><div class="alert alert-{{($recent->status?"success":"danger")}}" >{{($recent->status?"Sucess":"Failed")}}</div></td>
+                                                <td>{{$recent->created_at->diffForHumans()}}</td>
+                                            </tr>
+                                        @endforeach
 
-                                    <div>Total  = {{number_format($total)}}</div>
-                                <table class="table table-hover">
-                                    <thead class="text-warning">
-                                    <th>ID</th>
-                                    <th>User</th>
-                                    <th>Response/Request</th>
-                                    <th>Time</th>
-                                    </thead>
-                                    <tbody>
-                                    @php $x = 1; @endphp
-                                    @foreach($sales as $sale)
-                                        <tr>
-                                            <td>{{$x++}}</td>
-                                            <td>{{$sale->receiver_id}}</td>
-                                            <td>{{$sale->amount}}</td>
+                                        </tbody>
+                                    </table>
 
-                                            <td>{{$sale->created_at->diffForHumans()}}</td>
-                                        </tr>
-                                    @endforeach
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            {{$recents -> links()}}
+                                        </ul>
+                                    </nav>
 
-                                    </tbody>
-                                </table>
-
-                                    <div>total  = {{number_format($total)}}</div>
-
-
-
-                                    @endif
-                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="container-fluid">
-                <nav class="float-left"></nav>
-                <div class="copyright float-right">
-                    &copy;
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script>, made with <i class="material-icons">favorite</i>
-
-                </div>
-            </div>
-        </footer>
     </div>
+    <footer class="footer">
+        <div class="container-fluid">
+            <nav class="float-left"></nav>
+            <div class="copyright float-right">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script>, made with <i class="material-icons">favorite</i>
+
+            </div>
+        </div>
+    </footer>
+</div>
 </div>
 
 <script src="/assets/js/core/jquery.min.js"></script>
