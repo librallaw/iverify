@@ -56,7 +56,7 @@ Route::post("/verify/demo",[\App\Http\Controllers\VerificationController::class,
 Route::get("/verify/logs",[\App\Http\Controllers\VerificationController::class,'showLog']) -> name("showLog");
 Route::get("/topup/logs",[\App\Http\Controllers\VerificationController::class,'TopLog']) -> name("TopLog");
 Route::get("/admin/topup/logs/{id}",[\App\Http\Controllers\VerificationController::class,'ShowTopLog']) -> name("ShowTopLog");
-Route::get("/sales/",[\App\Http\Controllers\VerificationController::class,'sales']) -> name("sales");
+Route::get("/admin/sales/",[\App\Http\Controllers\VerificationController::class,'sales']) -> name("sales");
 
 Route::post('/pdf/slip', '\App\Http\Controllers\PdfController@printSlip')->name("printSlip");
 Route::post('/pdf/data', '\App\Http\Controllers\PdfController@downloadData')->name("downloadData");

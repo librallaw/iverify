@@ -20,7 +20,7 @@
                 </a>
             </li>
                 <li class="nav-item  @if(isset($active)) @if($active == "sales")active @endif  @endif  ">
-                <a class="nav-link" href="{{route("sales")}}">
+                <a class="nav-link" href="#">
                     <i class="fa fa-money"></i>
                     <p>Sales</p>
                 </a>
