@@ -104,7 +104,7 @@ class VerificationController extends Controller
                     CURLOPT_CUSTOMREQUEST => 'POST',
                     CURLOPT_POSTFIELDS => array('data' => $request->data,'searchType' => $field),
                     CURLOPT_HTTPHEADER => array(
-                        'SECRET-KEY: librallawkey',
+                        'SECRET-KEY: libky',
                         'ORG-ID: librallaw',
                         'Accept: application/json'
                     ),
@@ -281,7 +281,7 @@ class VerificationController extends Controller
                     CURLOPT_POSTFIELDS => array('firstName' => $request->first_name,'lastName' => $request->last_name,'gender' => $request->gender,'dateOfBirth' => $request->dob),
                     CURLOPT_HTTPHEADER => array(
                         'ORG-ID: librallaw',
-                        'SECRET-KEY: librallawkey'
+                        'SECRET-KEY: libky'
                     ),
                 ));
 
