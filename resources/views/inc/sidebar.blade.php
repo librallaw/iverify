@@ -29,6 +29,22 @@
             @endif
 
 
+            @if(Auth::user()->level == 2)
+                <li class="nav-item  @if(isset($active)) @if($active == "organisation")active @endif  @endif  ">
+                    <a class="nav-link" href="{{route("showCreateOrganisation")}}">
+                        <i class="fa fa-plus"></i>
+                        <p>Create Organisation</p>
+                    </a>
+                </li>
+                <li class="nav-item  @if(isset($active)) @if($active == "vieworganisation")active @endif  @endif  ">
+                    <a class="nav-link" href="{{route("showAllOrganisations")}}">
+                        <i class="fa fa-users"></i>
+                        <p>View Organisation</p>
+                    </a>
+                </li>
+            @endif
+
+
             <li class="nav-item  @if(isset($active)) @if($active == "verify")active @endif  @endif  ">
                 <a class="nav-link" href="{{route("loadVerification")}}">
                     <i class="material-icons">person</i>
@@ -51,7 +67,7 @@
                     <p>Top Up logs</p>
                 </a>
             </li>
-            <li class="nav-item @if(isset($active)) @if($active == "settings")active @endif  @endif  ">
+            <li class="nav-item  @if(isset($active)) @if($active == "settings")active @endif  @endif  ">
                 <a class="nav-link" href="{{route("changePassword")}}">
                     <i class="material-icons">settings</i>
                     <p>Settings</p>

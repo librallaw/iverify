@@ -34,6 +34,22 @@ Route::group(['middleware'=>'auth'], function () {
     Route::post('/search', '\App\Http\Controllers\SearchController@search')->name("search");
 
 
+    Route::get('/organisation/create', [\App\Http\Controllers\OrganisationController::class,'showCreateOrganisation'])->name("showCreateOrganisation");
+    Route::post('/organisation/create', '\App\Http\Controllers\OrganisationController@doCreateOrganisation')->name('doCreateOrganisation');
+    Route::get('/organisation/profile/{orgid}', '\App\Http\Controllers\OrganisationController@showOrganisationProfile')->name('showOrganisationProfile');
+
+    Route::get('/organisation/delete/{orgid}', '\App\Http\Controllers\OrganisationController@deleteOrganisation')->name('deleteOrganisation');
+
+    Route::post('/organisation/wallet/credit', '\App\Http\Controllers\OrganisationController@doCreditWallet')->name('doCreditWalletOrg');
+    Route::post('/organisation/wallet/withdraw', '\App\Http\Controllers\OrganisationController@doWithdrawWallet')->name('doWithdrawWalletOrg');
+
+    Route::post('/organisation/profile/edit', '\App\Http\Controllers\OrganisationController@doEditOrganisation')->name('doEditOrganisation');
+    Route::get('/organisation/all', '\App\Http\Controllers\OrganisationController@showAllOrganisations')->name('showAllOrganisations');
+    Route::get('/organisation/active', '\App\Http\Controllers\OrganisationController@showActiveOrganisations')->name('showActiveOrganisations');
+    Route::get('/organisation/inactive', '\App\Http\Controllers\OrganisationController@showInactiveOrganisations')->name('showInactiveOrganisations');
+    Route::get('/organisation/activate/{orgid}', '\App\Http\Controllers\OrganisationController@ActivateOrganisation')->name('ActivateOrganisationUser');
+
+
     Route::get("/dashboard",[\App\Http\Controllers\DashboardController::class,'showDashboard']) -> name("showDashboard");
 
 Route::get("/users/all",[\App\Http\Controllers\UsersController::class,'allUsers']) -> name("allUsers");
