@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Libraries\Messenger;
+use App\Models\Accountlog;
 use App\Models\Wallet;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -92,6 +93,11 @@ class PdfController extends Controller
 
 
 
+
+
+
+
+
             $datar  = json_decode($_POST['data']);
 
 
@@ -154,6 +160,16 @@ class PdfController extends Controller
             $photo = ($datar->photo ? $datar->photo: "");
             $gender = ($datar->gender ? strtoupper($datar->gender): "");
             $nin = ($datar->nin ? $datar->nin: "");
+
+
+
+            $log = new Accountlog();
+            $log->unique_id = Auth::user()->unique_id;
+            $log->action = "SLIP";
+            $log->trigger = Auth::user()->unique_id;
+            $log->message = "$surname.<-->.$firstname, Previous: {$balance}, New: {$balanceer-> balance} ";
+            $log->status = 1;
+            $log ->save();
 
 
             $data['data']=  json_decode($_POST['data']);
