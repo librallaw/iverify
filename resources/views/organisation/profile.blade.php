@@ -279,11 +279,11 @@
                     </div>
 
                     @if($account->active == 0)
-                        <a href="{{route("ActivateOrganisationUser",['orgid'=>$account->unique_id])}}"><button class="btn btn-success">Click here to Activate</button></a>
+                        <a href="{{route("ActivateOrganisationUser",['orgid'=>$account->unique_id])}}"><button class="btn btn-success">Click here to Activate Organisation</button></a>
                     @endif
                     @if($account->active == 1)
                         <br />
-                        <a href="{{route("ActivateOrganisationUser",['orgid'=>$account->unique_id])}}"><button class="btn btn-danger">Click here to Deactivate</button></a>
+                        <a href="{{route("ActivateOrganisationUser",['orgid'=>$account->unique_id])}}"><button class="btn btn-danger">Deactivate Organisation</button></a>
                     @endif
 
 
