@@ -183,7 +183,7 @@ class PaymentController extends Controller
 
             }else{
 
-
+                return Redirect::route("loadPaymentScreen")->with("message","Value already given for this transaction")->with("type","success");
             }
 
 
