@@ -20,6 +20,7 @@ class PaymentController extends Controller
 
 
         $data['balance'] = Wallet::where("unique_id",Auth::user()->unique_id)->first()->balance;
+        $data['active'] = "payment";
 
         //dd( $messenger->getApi("api/user/credits"));
 
