@@ -302,25 +302,25 @@ class VerificationController extends Controller
 
 
 
-                if(isset($data->data->data)){
+                //if(isset($data->data->data)){
 
                    // if(is_object($data->data->data)){
 
 
                         $log = new Accountlog();
-                        $log->unique_id = Auth::user()->unique_id;
-                        $log->action = "Verify";
-                        $log->trigger =  Auth::user()->unique_id;
-                        $log->message = "Empty Data <-> Demo <->$request->first_name <-> $request->last_name <-> $request->dob <-> $request->gender";
-                        $log->status = 0;
-                        $log ->save();
+//                        $log->unique_id = Auth::user()->unique_id;
+//                        $log->action = "Verify";
+//                        $log->trigger =  Auth::user()->unique_id;
+//                        $log->message = "Empty Data <-> Demo <->$request->first_name <-> $request->last_name <-> $request->dob <-> $request->gender";
+//                        $log->status = 0;
+//                        $log ->save();
+//
+//
+//                        return Redirect::back()->with("message", "User has no record on file, no further action required")->with("type",'danger');
+//                   // }
 
 
-                        return Redirect::back()->with("message", "User has no record on file, no further action required")->with("type",'danger');
-                   // }
-
-
-                }
+             //   }
 
 
 
