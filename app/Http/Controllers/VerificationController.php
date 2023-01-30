@@ -304,7 +304,7 @@ class VerificationController extends Controller
 
                 if(isset($data->data->data)){
 
-                    if(is_object($data->data->data)){
+                   // if(is_object($data->data->data)){
 
 
                         $log = new Accountlog();
@@ -317,7 +317,7 @@ class VerificationController extends Controller
 
 
                         return Redirect::back()->with("message", "User has no record on file, no further action required")->with("type",'danger');
-                    }
+                   // }
 
 
                 }
