@@ -42,6 +42,13 @@
                         <p>View Organisation</p>
                     </a>
                 </li>
+
+                <li class="nav-item  @if(isset($active)) @if($active == "vieworganisation")active @endif  @endif  ">
+                    <a class="nav-link" href="{{route("loadPaymentScreen")}}">
+                        <i class="fa fa-moneu"></i>
+                        <p>Buy Units</p>
+                    </a>
+                </li>
             @endif
 
 

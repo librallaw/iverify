@@ -49,6 +49,14 @@ Route::group(['middleware'=>'auth'], function () {
     Route::get('/organisation/inactive', '\App\Http\Controllers\OrganisationController@showInactiveOrganisations')->name('showInactiveOrganisations');
     Route::get('/organisation/activate/{orgid}', '\App\Http\Controllers\OrganisationController@ActivateOrganisation')->name('ActivateOrganisationUser');
 
+    Route::post('/organisation/wallet/show', '\App\Http\Controllers\PaymentController@getLink')->name('getLink');
+    Route::get('/organisation/transaction/verify', '\App\Http\Controllers\PaymentController@verifyTransaction')->name('verifyTransaction');
+
+    Route::get('/organisation/wallet/show', '\App\Http\Controllers\PaymentController@loadPaymentScreen')->name('loadPaymentScreen');
+    Route::get('/organisation/wallet/success', '\App\Http\Controllers\PaymentController@verifyPaymentRef')->name('verifyPaymentRef');
+
+
+
 
     Route::get("/dashboard",[\App\Http\Controllers\DashboardController::class,'showDashboard']) -> name("showDashboard");
 
