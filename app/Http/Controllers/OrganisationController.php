@@ -322,7 +322,7 @@ class OrganisationController extends Controller
 
                 $log = new Accountlog();
                 $log->unique_id = Auth::user()->unique_id;
-                $log->action = "Credit Wallet";
+                $log->action = "Credit Wallet Sub";
                 $log->trigger =  $request->orgid;
                 $log->message = "Added: {$request->amount}, Previous: {$prev}, New: {$wallet-> balance} ";
                 $log->status = 1;
@@ -331,7 +331,7 @@ class OrganisationController extends Controller
 
                 $log = new Accountlog();
                 $log->unique_id = Auth::user()->unique_id;
-                $log->action = "Disburse Credit";
+                $log->action = "Disburse Credit Sub";
                 $log->trigger =  $request->orgid;
                 $log->message = "Disbursed: {$request->amount}, Previous: {$prev_parent}, New: {$balance-> balance}  Organisation: {$request->orgid} ";
                 $log->status = 1;
@@ -455,7 +455,7 @@ class OrganisationController extends Controller
                     //check that wallet has enough balance
                     if($prev < $request->amount){
 
-                        $messenger->log(Auth::user()->unique_id,"Withdraw Wallet", $request->orgid,"Insufficient balance",0);
+                        $messenger->log(Auth::user()->unique_id,"Withdraw Wallet ", $request->orgid,"Insufficient balance",0);
 
                         return Redirect::to(route("showOrganisationProfile", ['orgid' => $request->post("orgid")]))->with("message", "Wallet does not have enough balance to perform this withdrawal.")->with("type", 'danger');
 
@@ -598,10 +598,10 @@ class OrganisationController extends Controller
 
 
 
-                $messenger->log($request->orgid,"Withdraw Wallet", $request->orgid,"Withdraw: {$request->amount}, Previous: {$prev}, New: {$wallet-> balance} ",1);
+                $messenger->log($request->orgid,"Withdraw Wallet sub", $request->orgid,"Withdraw: {$request->amount}, Previous: {$prev}, New: {$wallet-> balance} ",1);
 
 
-                $messenger->log(Auth::user()->unique_id,"Withdraw Credit", $request->orgid,"Withdrew: {$request->amount}, Previous: {$prev}, New: {$balance-> balance}  Organisation: {$request->orgid} ",1);
+                $messenger->log(Auth::user()->unique_id,"Withdraw Credit sub", $request->orgid,"Withdrew: {$request->amount}, Previous: {$prev}, New: {$balance-> balance}  Organisation: {$request->orgid} ",1);
 
 
 

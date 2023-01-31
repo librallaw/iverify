@@ -20,8 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('verification.download');
+    return view('verification.premium');
 });
+
+Route::get('/test/print',"\App\Http\Controllers\PdfController@printTest" );
 
 Route::post('/login',[\App\Http\Controllers\AuthController::class,'login'])->name('doLogin');
 Route::get('/login',[\App\Http\Controllers\AuthController::class,'showLogin'])->name('login');

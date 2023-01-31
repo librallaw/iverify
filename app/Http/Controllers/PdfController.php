@@ -278,4 +278,12 @@ class PdfController extends Controller
     }
 
 
+    public function printTest()
+    {
+        $pdf = PDF::loadView('verification.premium');
+
+        return $pdf->inline('test.pdf');
+    }
+
+
 }
