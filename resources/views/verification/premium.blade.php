@@ -142,8 +142,6 @@
    // dd(url2())
 
     ?>
-    
-    
 
 
 
@@ -154,62 +152,65 @@
 
 
 
-<style>
-    .rotate1 {
-        writing-mode: vertical-lr;
-        -webkit-transform: rotate(-40deg);
-        -moz-transform: rotate(-40deg);
-        color:#a7b1a1;
-        position: absolute;
-        margin-top:165px;
-        margin-left:20px;
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
 
 
-    .rotate2 {
-        writing-mode: vertical-lr;
-        -webkit-transform: rotate(-35deg);
-        -moz-transform: rotate(-35deg);
-        color:#a7b1a1;
-        position: absolute;
-        margin-top:200px;
-        margin-left:18px;
-        font-size: 15px;
-        letter-spacing: 1px;
-    }
+    <style>
+        .rotate1 {
+            writing-mode: vertical-lr;
+            -webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            color:#a7b1a1;
+            position: absolute;
+            margin-top:160px;
+            margin-left:15px;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
 
 
-    .rotate3 {
-        writing-mode: vertical-lr;
-        -webkit-transform: rotate(35deg);
-        -moz-transform: rotate(35deg);
-        color:#a7b1a1;
-        position: absolute;
-        margin-top:210px;
-        margin-left:360px;
-        font-size: 13px;
+        .rotate2 {
+            writing-mode: vertical-lr;
+            -webkit-transform: rotate(-35deg);
+            -moz-transform: rotate(-35deg);
+            color:#a7b1a1;
+            position: absolute;
+            margin-top:210px;
+            margin-left:8px;
+            font-size: 13px;
+            letter-spacing: 1px;
 
-    }
-
-
-
-    .rotate4 {
-        writing-mode: vertical-lr;
-        -webkit-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        color:#a7b1a1;
-        position: absolute;
-        margin-top:140px;
-        margin-left:315px;
-        font-size: 13px;
-        letter-spacing: 2px;
-
-    }
+        }
 
 
-</style>
+        .rotate3 {
+            writing-mode: vertical-lr;
+            -webkit-transform: rotate(35deg);
+            -moz-transform: rotate(35deg);
+            color:#a7b1a1;
+            position: absolute;
+            margin-top:210px;
+            margin-left:360px;
+            font-size: 13px;
+
+        }
+
+
+
+        .rotate4 {
+            writing-mode: vertical-lr;
+            -webkit-transform: rotate(-180deg);
+            -moz-transform: rotate(-180deg);
+            color:#a7b1a1;
+            position: absolute;
+            margin-top:140px;
+            margin-left:315px;
+            font-size: 13px;
+            letter-spacing: 2px;
+
+        }
+
+
+    </style>
 <div class="id-card-tag" style="width:430px">
 
 
@@ -224,7 +225,20 @@
         @endif
 
     </div>
+    <div  id="flip" class="rotate1">
+        12345678901
+    </div>
+    <div  id="flip2" class="rotate2">
+        22345678901
+    </div>
 
+    <div  id="flip3" class="rotate3">
+        22345678901
+    </div>
+
+    <div  id="flip4" class="rotate4">
+        22345678901
+    </div>
 
     <div style="position: absolute;margin-top:5px;">
         <div style="margin-left: 120px;margin-top: 55px">

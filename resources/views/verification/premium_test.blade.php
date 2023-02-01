@@ -162,9 +162,9 @@
         -moz-transform: rotate(-40deg);
         color:#a7b1a1;
         position: absolute;
-        margin-top:165px;
-        margin-left:20px;
-        font-size: 15px;
+        margin-top:160px;
+        margin-left:15px;
+        font-size: 13px;
         letter-spacing: 1px;
     }
 
@@ -175,10 +175,11 @@
         -moz-transform: rotate(-35deg);
         color:#a7b1a1;
         position: absolute;
-        margin-top:200px;
-        margin-left:18px;
-        font-size: 15px;
+        margin-top:210px;
+        margin-left:8px;
+        font-size: 13px;
         letter-spacing: 1px;
+
     }
 
 
@@ -219,8 +220,23 @@
     <div style="position: absolute">
 
 
-            <img src="/image-001.jpg" style="width:90px;margin-top: 55px;margin-left: 10px">
+            <img src="{{url2()}}/image-001.jpg" style="width:90px;margin-top: 55px;margin-left: 10px">
 
+    </div>
+
+    <div  id="flip" class="rotate1">
+        12345678901
+    </div>
+    <div  id="flip2" class="rotate2">
+        22345678901
+    </div>
+
+    <div  id="flip3" class="rotate3">
+        22345678901
+    </div>
+
+    <div  id="flip4" class="rotate4">
+        22345678901
     </div>
 
 
