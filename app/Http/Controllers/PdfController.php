@@ -283,6 +283,8 @@ class PdfController extends Controller
     public function printPremiumSlip(Request $request)
     {
 
+        //dd($request);
+
         $request->validate([
             'data' => 'required'
         ]);

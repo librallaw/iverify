@@ -2,8 +2,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body style="font-family: 'Signika Negative', sans-serif;">
@@ -220,7 +219,7 @@
     <div style="position: absolute">
 
 
-            <img src="data:image/png;base64, {{$nonimage}}" style="width:90px;margin-top: 55px;margin-left: 10px">
+            <img src="/image-001.jpg" style="width:90px;margin-top: 55px;margin-left: 10px">
 
     </div>
 
@@ -229,17 +228,17 @@
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">LAWRENCE</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;">LAWRENCE</div>
             </div>
 
-            <div style="margin-top: 15px">
+            <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">LIBRAL/ CHIGOZIE</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">LIBRAL, CHIGOZIE</div>
             </div>
 
-            <div style="margin-top: 15px">
+            <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
 
 
@@ -249,9 +248,9 @@
 
     </div>
 
-    <div style="margin-top: 151px;margin-left: 230px;position: absolute;">
+    <div style="margin-top: 137px;margin-left: 230px;position: absolute;">
         <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
-        <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">M</div>
+        <div style="font-size: 12px;color:black;letter-spacing: 2px;">M</div>
     </div>
 
 
@@ -262,7 +261,7 @@
 
     <div style="margin-top: 214px;margin-left: 63px;position: absolute;width:100%;">
 
-        <div style="font-family: 'Signika Negative', sans-serif;font-size: 30px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: bold;">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 30px;margin-top: 0px;color:black;letter-spacing: 6px;">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
     </div>
 
     <div style="margin-top: 133px;margin-left: 345px;position: absolute;color:black;">

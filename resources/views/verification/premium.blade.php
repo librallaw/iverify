@@ -2,7 +2,7 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
@@ -230,17 +230,17 @@
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">{{$surname}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;font-weight: bold">{{$surname}}</div>
             </div>
 
-            <div style="margin-top: 15px">
+            <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">{{$middlename}}, {{$firstname}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;width: 400px;">{{$middlename}}, {{$firstname}}</div>
             </div>
 
-            <div style="margin-top: 15px">
+            <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;font-weight: bold;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
 
 
@@ -250,9 +250,9 @@
 
     </div>
 
-    <div style="margin-top: 152px;margin-left: 230px;position: absolute;">
+    <div style="margin-top: 137px;margin-left: 230px;position: absolute;">
         <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
-        <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">{{$gender}}</div>
+        <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$gender}}</div>
     </div>
 
 
