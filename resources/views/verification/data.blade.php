@@ -175,7 +175,7 @@
                                         @endif
                                     @endif
                                 </p>
-                                <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal">Print Slip</a>
+                                <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal">Print Standard Slip</a>
                                 <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#premiumModal">Print Premium Slip</a>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -186,7 +186,7 @@
 
                                                 <h6>Sample Image</h6>
                                                 <br />
-                                                <div><img src="/standardnin.png"  /></div>
+                                                <div><img src="/standardnin.png"  style="width:300px;" /></div>
 
 
 
