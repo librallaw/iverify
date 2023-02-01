@@ -277,7 +277,7 @@
 
     <div style="margin-top: 214px;margin-left: 63px;position: absolute;width:100%;">
 
-        <div style="font-family: 'Signika Negative', sans-serif;font-size: 30px;margin-top: 0px;color:black;letter-spacing: 6px;">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 30px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: lighter">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
     </div>
 
     <div style="margin-top: 133px;margin-left: 345px;position: absolute;color:black;">
