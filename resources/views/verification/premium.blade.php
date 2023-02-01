@@ -226,18 +226,18 @@
 
     </div>
     <div  id="flip" class="rotate1">
-        12345678901
+        {{$nin}}
     </div>
     <div  id="flip2" class="rotate2">
-        22345678901
+        {{$nin}}
     </div>
 
     <div  id="flip3" class="rotate3">
-        22345678901
+        {{$nin}}
     </div>
 
     <div  id="flip4" class="rotate4">
-        22345678901
+        {{$nin}}
     </div>
 
     <div style="position: absolute;margin-top:5px;">
