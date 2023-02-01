@@ -203,7 +203,7 @@
             -moz-transform: rotate(-180deg);
             color:#a7b1a1;
             position: absolute;
-            margin-top:10px;
+            margin-top:140px;
             margin-left:315px;
             font-size: 13px;
             letter-spacing: 2px;
