@@ -230,7 +230,7 @@
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;font-weight: bold">{{$surname}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$surname}}</div>
             </div>
 
             <div style="margin-top: 10px">
@@ -240,7 +240,7 @@
 
             <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;font-weight: bold;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
 
 
