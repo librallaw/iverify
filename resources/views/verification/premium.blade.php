@@ -235,7 +235,7 @@
 
             <div style="margin-top: 15px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">{{$middlename}}/ {{$firstname}}</div>
+                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">{{$middlename}}, {{$firstname}}</div>
             </div>
 
             <div style="margin-top: 15px">
