@@ -3,6 +3,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body style="font-family: 'Signika Negative', sans-serif;">
@@ -190,7 +191,7 @@
         color:#a7b1a1;
         position: absolute;
         margin-top:210px;
-        margin-left:360px;
+        margin-left:345px;
         font-size: 13px;
 
     }
@@ -212,6 +213,15 @@
 
 
 </style>
+
+
+
+    <?php
+        $gender = "M";
+        $surname = "LAWRENCE";
+        $middlename = "LIBRAL";
+       $firstname = "CHIGOZIE";
+    ?>
 <div class="id-card-tag" style="width:430px">
 
 
@@ -225,18 +235,18 @@
     </div>
 
     <div  id="flip" class="rotate1">
-        12345678901
+        {{$nin}}
     </div>
     <div  id="flip2" class="rotate2">
-        22345678901
+        {{$nin}}
     </div>
 
     <div  id="flip3" class="rotate3">
-        22345678901
+        {{$nin}}
     </div>
 
     <div  id="flip4" class="rotate4">
-        22345678901
+        {{$nin}}
     </div>
 
 
@@ -244,15 +254,15 @@
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;">LAWRENCE</div>
+                <div style="font-size: 13px;color:black;letter-spacing: 2px;font-family: 'Signika Negative', sans-serif;font-weight:lighter">  {{$surname}}</div>
             </div>
 
-            <div style="margin-top: 10px">
+            <div style="margin-top: 13px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">LIBRAL, CHIGOZIE</div>
+                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$middlename}},  {{$firstname}}</div>
             </div>
 
-            <div style="margin-top: 10px">
+            <div style="margin-top: 14px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
                 <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
@@ -264,9 +274,9 @@
 
     </div>
 
-    <div style="margin-top: 137px;margin-left: 230px;position: absolute;">
+    <div style="margin-top: 145px;margin-left: 230px;position: absolute;">
         <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
-        <div style="font-size: 12px;color:black;letter-spacing: 2px;">M</div>
+        <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$gender}}</div>
     </div>
 
 

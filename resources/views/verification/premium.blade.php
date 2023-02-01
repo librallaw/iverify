@@ -202,7 +202,7 @@
             -moz-transform: rotate(-180deg);
             color:#a7b1a1;
             position: absolute;
-            margin-top:140px;
+            margin-top:10px;
             margin-left:315px;
             font-size: 13px;
             letter-spacing: 2px;
@@ -241,18 +241,19 @@
     </div>
 
     <div style="position: absolute;margin-top:5px;">
+
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$surname}}</div>
+                <div style="font-size: 13px;color:black;letter-spacing: 2px;font-family: 'Signika Negative', sans-serif;font-weight:lighter">  {{$surname}}</div>
             </div>
 
-            <div style="margin-top: 10px">
+            <div style="margin-top: 13px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;width: 400px;">{{$middlename}}, {{$firstname}}</div>
+                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$middlename}},  {{$firstname}}</div>
             </div>
 
-            <div style="margin-top: 10px">
+            <div style="margin-top: 14px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
                 <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
@@ -264,7 +265,7 @@
 
     </div>
 
-    <div style="margin-top: 137px;margin-left: 230px;position: absolute;">
+    <div style="margin-top: 145px;margin-left: 230px;position: absolute;">
         <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
         <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$gender}}</div>
     </div>
