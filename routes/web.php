@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('verification.premium');
+    return view('verification.premium_test');
 });
 
 Route::get('/test/print',"\App\Http\Controllers\PdfController@printTest" );
@@ -86,6 +86,7 @@ Route::get("/admin/sales/",[\App\Http\Controllers\VerificationController::class,
 
 Route::post('/pdf/slip', '\App\Http\Controllers\PdfController@printSlip')->name("printSlip");
 Route::post('/pdf/data', '\App\Http\Controllers\PdfController@downloadData')->name("downloadData");
+Route::post('/pdf/premium', '\App\Http\Controllers\PdfController@printPremiumSlip')->name("printPremiumSlip");
 
 Route::get('/settings',[\App\Http\Controllers\AuthController::class,'changePassword'])->name('changePassword');
 Route::post('/settings',[\App\Http\Controllers\AuthController::class,'doChangePassword'])->name('doChangePassword');

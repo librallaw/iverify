@@ -175,7 +175,8 @@
                                         @endif
                                     @endif
                                 </p>
-                                <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal">Print Premium Slip</a>
+                                <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#exampleModal">Print Slip</a>
+                                <a href="#" class="btn btn-primary btn-round" data-toggle="modal" data-target="#premiumModal">Print Premium Slip</a>
 
                                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
@@ -186,6 +187,44 @@
 
 
                                                 <form method="post" action="{{route("printSlip")}}" target="_blank">
+                                                    @csrf
+
+
+                                                    <br />
+                                                    <br />
+                                                    <input value="{{json_encode($userdata)}}" name="data" hidden/>
+
+                                                    <button class="btn btn-success" id="pdfdatas" type="submit">Generate Slip</button>
+
+<small>1 credit is required</small>
+                                                    <br />
+                                                    <br />
+
+
+                                                </form>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="modal fade" id="premiumModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+
+                                            <div class="modal-body">
+
+                                                <h6>Sample Image</h6>
+                                                <br />
+                                                <div><img src="/samplepremium.png"  /></div>
+
+
+
+
+
+                                                <form method="post" action="{{route("printPremiumSlip")}}" target="_blank">
                                                     @csrf
 
 

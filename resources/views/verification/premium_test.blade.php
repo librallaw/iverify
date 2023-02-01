@@ -86,13 +86,15 @@
     }else{
         $nin = "***********";
     }
-       
+
+
+    $nin = 12345678901;
        
        
        
 
 
-    $year = $birthdate;
+    $year = "02-03-1992";
     $fr_month = explode("-",$year);
 
 
@@ -216,12 +218,9 @@
 
 
     <div style="position: absolute">
-        @if(is_object($data->photo))
+
 
             <img src="data:image/png;base64, {{$nonimage}}" style="width:90px;margin-top: 55px;margin-left: 10px">
-        @else
-            <img src="data:image/png;base64, {{$data->photo}}" style="width:90px;margin-top: 55px;margin-left: 10px">
-        @endif
 
     </div>
 
@@ -230,12 +229,12 @@
         <div style="margin-left: 120px;margin-top: 55px">
             <div>
                 <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">{{$surname}}</div>
+                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">LAWRENCE</div>
             </div>
 
             <div style="margin-top: 15px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">{{$middlename}}/ {{$firstname}}</div>
+                <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold;width: 400px;">LIBRAL/ CHIGOZIE</div>
             </div>
 
             <div style="margin-top: 15px">
@@ -250,9 +249,9 @@
 
     </div>
 
-    <div style="margin-top: 152px;margin-left: 230px;position: absolute;">
+    <div style="margin-top: 151px;margin-left: 230px;position: absolute;">
         <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
-        <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">{{$gender}}</div>
+        <div style="font-size: 12px;margin-top: 2px;color:black;letter-spacing: 2px;font-weight: bold">M</div>
     </div>
 
 

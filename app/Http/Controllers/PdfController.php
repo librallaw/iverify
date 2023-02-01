@@ -278,9 +278,137 @@ class PdfController extends Controller
     }
 
 
+
+
+    public function printPremiumSlip(Request $request)
+    {
+
+        $request->validate([
+            'data' => 'required'
+        ]);
+
+
+        $balance =  Wallet::where("unique_id", Auth::user()->unique_id)->first()->balance;
+
+
+        if($balance > 1){
+
+            $balanceer = Wallet::where("unique_id", Auth::user()->unique_id)->first();
+
+            $balanceer -> balance = $balance -1;
+
+            $balanceer -> save();
+
+
+
+
+
+
+
+
+
+
+
+
+            $datar  = json_decode($_POST['data']);
+
+
+            // dd($datar);
+
+            if(isset($datar->birthdate)){
+                if(is_object($datar->birthdate)){
+                    $birthdate =   " *** ";
+                }
+                else{
+                    $birthdate = $datar->birthdate;
+                }
+
+            } else {
+
+                $birthdate = "****";
+            }
+
+            if(isset($datar->firstname)){
+                if(is_object($datar->firstname)){
+                    $firstname =  " *** ";
+                }
+                else{
+                    $firstname = $datar->firstname;
+                }
+
+            } else {
+
+                $firstname = "****";
+            }
+
+
+            if(isset($datar->middlename)){
+                if(is_object($datar->middlename)){
+                    $middlename =    " *** ";
+                }
+                else{
+                    $middlename = $datar->middlename;
+                }
+
+            } else {
+
+                $middlename = "****";
+            }
+
+            if(isset($datar->surname)){
+                if(is_object($datar->surname)){
+                    $surname =  " *** ";
+                }
+                else{
+                    $surname = $datar->surname;
+                }
+
+            } else {
+
+
+                $surname = "****";
+            }
+
+            $photo = ($datar->photo ? $datar->photo: "");
+            $gender = ($datar->gender ? strtoupper($datar->gender): "");
+            $nin = ($datar->nin ? $datar->nin: "");
+
+
+
+            $log = new Accountlog();
+            $log->unique_id = Auth::user()->unique_id;
+            $log->action = "PREMIUM SLIP";
+            $log->trigger = Auth::user()->unique_id;
+            $log->message = "$surname.<-->.$firstname, Previous: {$balance}, New: {$balanceer-> balance} ";
+            $log->status = 1;
+            $log ->save();
+
+
+            $data['data']=  json_decode($_POST['data']);
+
+
+            $pdf = PDF::loadView('verification.premium', $data);
+
+            return $pdf->download($surname."-".$firstname.'.pdf');
+
+        }else{
+
+            return Redirect::route("loadVerification")->with("message","Insufficient credit")->with("type","danger");
+        }
+
+
+
+
+
+
+
+
+    }
+
+
     public function printTest()
     {
-        $pdf = PDF::loadView('verification.premium');
+        $pdf = PDF::loadView('verification.premium_test');
 
         return $pdf->inline('test.pdf');
     }
