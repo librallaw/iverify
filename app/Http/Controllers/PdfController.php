@@ -301,15 +301,6 @@ class PdfController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
             $datar  = json_decode($_POST['data']);
 
 

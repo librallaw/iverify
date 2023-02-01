@@ -184,6 +184,10 @@
 
                                             <div class="modal-body">
 
+                                                <h6>Sample Image</h6>
+                                                <br />
+                                                <div><img src="/standardnin.png"  /></div>
+
 
 
                                                 <form method="post" action="{{route("printSlip")}}" target="_blank">
