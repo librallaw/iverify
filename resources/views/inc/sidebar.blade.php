@@ -30,12 +30,12 @@
 
 
             @if(Auth::user()->level == 2)
-{{--                <li class="nav-item  @if(isset($active)) @if($active == "payment")active @endif  @endif  ">--}}
-{{--                    <a class="nav-link" href="{{route("loadPaymentScreen")}}">--}}
-{{--                        <i class="fa fa-money"></i>--}}
-{{--                        <p>Buy Units</p>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li class="nav-item  @if(isset($active)) @if($active == "payment")active @endif  @endif  ">
+                    <a class="nav-link" href="{{route("loadPaymentScreen")}}">
+                        <i class="fa fa-money"></i>
+                        <p>Buy Units</p>
+                    </a>
+                </li>
                 <li class="nav-item  @if(isset($active)) @if($active == "organisation")active @endif  @endif  ">
                     <a class="nav-link" href="{{route("showCreateOrganisation")}}">
                         <i class="fa fa-plus"></i>
