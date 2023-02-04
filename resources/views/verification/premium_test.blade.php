@@ -257,14 +257,14 @@
                 <div style="font-size: 13px;color:black;letter-spacing: 2px;font-family: 'Signika Negative', sans-serif;font-weight:lighter">  {{$surname}}</div>
             </div>
 
-            <div style="margin-top: 13px">
+            <div style="margin-top: 13px;line-height: 85%;">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$middlename}},  {{$firstname}}</div>
+                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: lighter">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
             </div>
 
             <div style="margin-top: 14px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
-                <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
+                <div style="font-weight:lighter;font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
 
 

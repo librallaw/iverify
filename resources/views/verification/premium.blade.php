@@ -251,7 +251,7 @@
 
             <div style="margin-top: 10px">
                 <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
-                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$middlename}},  {{$firstname}}</div>
+                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$firstname}}, {{$middlename}}  </div>
             </div>
 
             <div style="margin-top: 10px">
