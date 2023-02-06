@@ -172,8 +172,8 @@
 
     .rotate2 {
         writing-mode: vertical-lr;
-        -webkit-transform: rotate(-35deg);
-        -moz-transform: rotate(-35deg);
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-45deg);
         color:#a7b1a1;
         position: absolute;
         margin-top:210px;
