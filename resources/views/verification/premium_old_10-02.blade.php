@@ -228,93 +228,95 @@
 
 
     </style>
-    <div class="id-card-tag" style="width:700px;margin: auto">
+<div class="id-card-tag" style="width:430px">
 
 
 
 
-        <div style="position: absolute"> @if(is_object($data->photo))
+    <div style="position: absolute">
+        @if(is_object($data->photo))
 
-                <img src="data:image/png;base64, {{$nonimage}}" style="width:150px;margin-top: 85px;margin-left: 15px">
-            @else
-                <img src="data:image/png;base64, {{$data->photo}}" style="width:150px;margin-top: 85px;margin-left: 15px">
-            @endif</div>
+            <img src="data:image/png;base64, {{$nonimage}}" style="width:90px;margin-top: 55px;margin-left: 10px">
+        @else
+            <img src="data:image/png;base64, {{$data->photo}}" style="width:90px;margin-top: 55px;margin-left: 10px">
+        @endif
 
-        <div  id="flip" class="rotate1">
-            {{$nin}}
-        </div>
-        <div  id="flip2" class="rotate2">
-            {{$nin}}
-        </div>
+    </div>
+    <div  id="flip" class="rotate1">
+        {{$nin}}
+    </div>
+    <div  id="flip2" class="rotate2">
+        {{$nin}}
+    </div>
 
-        <div  id="flip3" class="rotate3">
-            {{$nin}}
-        </div>
+    <div  id="flip3" class="rotate3">
+        {{$nin}}
+    </div>
 
-        <div  id="flip4" class="rotate4">
-            {{$nin}}
-        </div>
+    <div  id="flip4" class="rotate4">
+        {{$nin}}
+    </div>
 
+    <div style="position: absolute;margin-top:5px;">
 
-        <div style="position: absolute;margin-top:45px;">
-            <div style="margin-left: 195px;margin-top: 55px">
-                <div>
-                    <div class="title_name">SURNAME/NOM</div>
-                    <div class="sub_name">  {{$surname}}</div>
-                </div>
+        <div style="margin-left: 120px;margin-top: 55px">
+            <div>
+                <div style="font-size: 11px;font-weight: bold;color:#646262">SURNAME/NOM</div>
+                <div style="font-size: 13px;color:black;letter-spacing: 2px;font-family: 'Signika Negative', sans-serif;font-weight:lighter">  {{$surname}}</div>
+            </div>
 
-                <div style="margin-top: 20px;">
-                    <div class="title_name">GIVEN NAMES/PRENOMS</div>
-                    <div class="sub_name">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
-                </div>
+            <div style="margin-top: 10px">
+                <div style="font-size: 11px;font-weight: bold;color:#646262">GIVEN NAMES/PRENOMS</div>
+                <div style="font-family: 'Signika Negative', sans-serif;font-size: 12px;color:black;letter-spacing: 2px;width: 400px;font-weight: 500">{{$firstname}}, {{$middlename}}  </div>
+            </div>
 
-                <div style="margin-top: 20px">
-                    <div class="title_name">DATE OF BIRTH</div>
-                    <div class="sub_name">{{$fr_month[0]}}&nbsp;&nbsp; {{$month[$fr_month[01]]}}&nbsp;&nbsp; {{$fr_month[2]}}</div>
-                </div>
-
-
+            <div style="margin-top: 10px">
+                <div style="font-size: 11px;font-weight: bold;color:#646262">DATE OF BIRTH</div>
+                <div style="font-size: 12px;color:black;letter-spacing: 2px;width:100%">{{$fr_month[0]}} {{$month[$fr_month[01]]}} {{$fr_month[2]}}</div>
             </div>
 
 
-
-        </div>
-
-        <div style="margin-top: 225px;margin-left: 370px;position: absolute;">
-            <div style="font-size: 17px;font-weight: bold;color:#646262">SEX/SEXE</div>
-            <div style="font-size: 15px;color:black;letter-spacing: 2px;font-weight: 400">{{$gender}}</div>
         </div>
 
 
-        <div style="margin-top: 330px;margin-left: 170px;position: absolute;width:100%">
-            <div style="font-size: 20px;font-weight: bold;color:#000000; letter-spacing: 1px">National Identification Number (NIN)</div>
 
-        </div>
-
-        <div style="margin-top: 350px;margin-left: 105px;position: absolute;width:100%;">
-
-            <div style="font-family: 'Signika Negative', sans-serif;font-size: 50px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: 400">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
-        </div>
-
-        <div style="margin-top: 215px;margin-left: 568px;position: absolute;color:black; width: 700px;">
-            <div style="font-family: 'Signika Negative', sans-serif;font-size: 40px;font-weight: bold;color:#000000">NGA</div>
-        </div>
-
-        <div style="margin-top: 263px;margin-left: 560px;position: absolute;color:black;">
-            <div style="font-size: 18px;font-weight: bold;color:#000000">ISSUE DATE</div>
-        </div>
-
-        <div style="margin-top: 285px;margin-left: 545px;position: absolute;color:black; width: 100%;">
-            <div style="font-size: 15px;letter-spacing:2px;color:#000000">{{$day}}&nbsp;&nbsp; {{$month[$mtn]}}&nbsp;&nbsp; {{$yr}} </div>
-        </div>
-
-
-        <div style="position: absolute">
-            <img src="{{$qrcode}}" style="margin-top: 32px;margin-left: 504px;width:180px;height:170px">
-        </div>
-
-        <img src="{{url2()}}/image-000.jpg" style="width: 100%;">
     </div>
+
+    <div style="margin-top: 145px;margin-left: 230px;position: absolute;">
+        <div style="font-size: 11px;font-weight: bold;color:#646262">SEX/SEXE</div>
+        <div style="font-size: 12px;color:black;letter-spacing: 2px;">{{$gender}}</div>
+    </div>
+
+
+    <div style="margin-top: 200px;margin-left: 100px;position: absolute;width:100%">
+        <div style="font-size: 13px;font-weight: bold;color:#000000; letter-spacing: 1px">National Identification Number (NIN)</div>
+
+    </div>
+
+    <div style="margin-top: 214px;margin-left: 63px;position: absolute;width:100%;">
+
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 30px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: lighter">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
+    </div>
+
+    <div style="margin-top: 133px;margin-left: 345px;position: absolute;color:black;">
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 20px;font-weight: bold;color:#000000">NGA</div>
+    </div>
+
+    <div style="margin-top: 158px;margin-left: 335px;position: absolute;color:black;">
+        <div style="font-size: 12px;font-weight: bold;color:#000000">ISSUE DATE</div>
+    </div>
+
+    <div style="margin-top: 172px;margin-left: 320px;position: absolute;color:black; width: 100%;">
+        <div style="font-size: 12px;letter-spacing:1px;color:#000000">{{$day}}&nbsp;&nbsp; {{$month[$mtn]}}&nbsp;&nbsp; {{$yr}} </div>
+    </div>
+
+
+    <div style="position: absolute">
+        <img src="{{$qrcode}}" style="margin-top: 22px;margin-left: 312px;width:108px;height:105px">
+    </div>
+
+    <img src="{{url2()}}/image-000.jpg" style="width: 100%;">
+</div>
 <div class="id-card-tag-strip"></div>
 <div class="id-card-hook"></div>
 <div class="id-card-holder">

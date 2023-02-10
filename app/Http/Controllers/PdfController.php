@@ -401,7 +401,7 @@ class PdfController extends Controller
 
     public function printTest()
     {
-        $pdf = PDF::loadView('verification.premium_test');
+        $pdf = PDF::loadView('verification.premium_test2');
 
         return $pdf->inline('test.pdf');
     }

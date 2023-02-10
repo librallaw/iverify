@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/test', function () {
-    return view('verification.premium_test');
+    return view('verification.premium_test2');
 });
 
 Route::get('/test/print',"\App\Http\Controllers\PdfController@printTest" );

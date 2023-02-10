@@ -3,7 +3,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;500;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@700&display=swap" rel="stylesheet">
 </head>
 
 <body style="font-family: 'Signika Negative', sans-serif;">
@@ -86,13 +86,15 @@
     }else{
         $nin = "***********";
     }
-       
+
+
+    $nin = 12345678901;
        
        
        
 
 
-    $year = $birthdate;
+    $year = "02-03-1992";
     $fr_month = explode("-",$year);
 
 
@@ -142,6 +144,8 @@
    // dd(url2())
 
     ?>
+    
+    
 
 
 
@@ -152,169 +156,176 @@
 
 
 
+<style>
+    .rotate1 {
+        writing-mode: vertical-lr;
+        -webkit-transform: rotate(-40deg);
+        -moz-transform: rotate(-40deg);
+        color:#a7b1a1;
+        position: absolute;
+        margin-top:260px;
+        margin-left:30px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
 
 
-    <style>
-        .rotate1 {
-            writing-mode: vertical-lr;
-            -webkit-transform: rotate(-40deg);
-            -moz-transform: rotate(-40deg);
-            color:#a7b1a1;
-            position: absolute;
-            margin-top:260px;
-            margin-left:30px;
-            font-size: 18px;
-            letter-spacing: 1px;
-        }
+    .rotate2 {
+        writing-mode: vertical-lr;
+        -webkit-transform: rotate(-35deg);
+        -moz-transform: rotate(-35deg);
+        color:#a7b1a1;
+        position: absolute;
+        margin-top:325px;
+        margin-left:16px;
+        font-size: 18px;
+        letter-spacing: 1px;
+
+    }
 
 
-        .rotate2 {
-            writing-mode: vertical-lr;
-            -webkit-transform: rotate(-35deg);
-            -moz-transform: rotate(-35deg);
-            color:#a7b1a1;
-            position: absolute;
-            margin-top:325px;
-            margin-left:16px;
-            font-size: 18px;
-            letter-spacing: 1px;
+    .rotate3 {
+        writing-mode: vertical-lr;
+        -webkit-transform: rotate(35deg);
+        -moz-transform: rotate(35deg);
+        color:#a7b1a1;
+        position: absolute;
+        margin-top:348px;
+        margin-left:555px;
+        font-size: 20px;
+        letter-spacing: 1px;
 
-        }
-
-
-        .rotate3 {
-            writing-mode: vertical-lr;
-            -webkit-transform: rotate(35deg);
-            -moz-transform: rotate(35deg);
-            color:#a7b1a1;
-            position: absolute;
-            margin-top:348px;
-            margin-left:555px;
-            font-size: 20px;
-            letter-spacing: 1px;
-
-        }
-
-
-
-        .rotate4 {
-            writing-mode: vertical-lr;
-            -webkit-transform: rotate(-180deg);
-            -moz-transform: rotate(-180deg);
-            color:#a7b1a1;
-            position: absolute;
-            margin-top:220px;
-            margin-left:535px;
-            font-size: 20px;
-            letter-spacing: 2px;
-
-        }
-
-
-        .title_name{
-            font-size: 17px;
-            font-weight: bold;
-            color:#646262
-        }
-
-        .sub_name{
-            font-size: 15px;
-            color:black;
-            letter-spacing: 2px;
-            font-family: 'Signika Negative', sans-serif;
-            font-weight:400;
-            margin-top: 1px;
-        }
-
-
-    </style>
-    <div class="id-card-tag" style="width:700px;margin: auto">
+    }
 
 
 
+    .rotate4 {
+        writing-mode: vertical-lr;
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        color:#a7b1a1;
+        position: absolute;
+        margin-top:220px;
+        margin-left:535px;
+        font-size: 20px;
+        letter-spacing: 2px;
 
-        <div style="position: absolute"> @if(is_object($data->photo))
-
-                <img src="data:image/png;base64, {{$nonimage}}" style="width:150px;margin-top: 85px;margin-left: 15px">
-            @else
-                <img src="data:image/png;base64, {{$data->photo}}" style="width:150px;margin-top: 85px;margin-left: 15px">
-            @endif</div>
-
-        <div  id="flip" class="rotate1">
-            {{$nin}}
-        </div>
-        <div  id="flip2" class="rotate2">
-            {{$nin}}
-        </div>
-
-        <div  id="flip3" class="rotate3">
-            {{$nin}}
-        </div>
-
-        <div  id="flip4" class="rotate4">
-            {{$nin}}
-        </div>
+    }
 
 
-        <div style="position: absolute;margin-top:45px;">
-            <div style="margin-left: 195px;margin-top: 55px">
-                <div>
-                    <div class="title_name">SURNAME/NOM</div>
-                    <div class="sub_name">  {{$surname}}</div>
-                </div>
+    .title_name{
+        font-size: 17px;
+        font-weight: bold;
+        color:#646262
+    }
 
-                <div style="margin-top: 20px;">
-                    <div class="title_name">GIVEN NAMES/PRENOMS</div>
-                    <div class="sub_name">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
-                </div>
-
-                <div style="margin-top: 20px">
-                    <div class="title_name">DATE OF BIRTH</div>
-                    <div class="sub_name">{{$fr_month[0]}}&nbsp;&nbsp; {{$month[$fr_month[01]]}}&nbsp;&nbsp; {{$fr_month[2]}}</div>
-                </div>
+    .sub_name{
+        font-size: 15px;
+        color:black;
+        letter-spacing: 2px;
+        font-family: 'Signika Negative', sans-serif;
+        font-weight:400;
+        margin-top: 1px;
+    }
 
 
+</style>
+
+
+
+    <?php
+        $gender = "M";
+        $surname = "LAWRENCE";
+        $middlename = "LIBRAL";
+       $firstname = "CHIGOZIE";
+    ?>
+<div class="id-card-tag" style="width:700px;margin: auto">
+
+
+
+
+    <div style="position: absolute">
+
+
+            <img src="{{url2()}}/image-001.jpg" style="width:150px;margin-top: 85px;margin-left: 15px">
+
+    </div>
+
+    <div  id="flip" class="rotate1">
+        {{$nin}}
+    </div>
+    <div  id="flip2" class="rotate2">
+        {{$nin}}
+    </div>
+
+    <div  id="flip3" class="rotate3">
+        {{$nin}}
+    </div>
+
+    <div  id="flip4" class="rotate4">
+        {{$nin}}
+    </div>
+
+
+    <div style="position: absolute;margin-top:45px;">
+        <div style="margin-left: 195px;margin-top: 55px">
+            <div>
+                <div class="title_name">SURNAME/NOM</div>
+                <div class="sub_name">  {{$surname}}</div>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <div class="title_name">GIVEN NAMES/PRENOMS</div>
+                <div class="sub_name">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
+            </div>
+
+            <div style="margin-top: 20px">
+                <div class="title_name">DATE OF BIRTH</div>
+                <div class="sub_name">{{$fr_month[0]}}&nbsp;&nbsp; {{$month[$fr_month[01]]}}&nbsp;&nbsp; {{$fr_month[2]}}</div>
             </div>
 
 
-
-        </div>
-
-        <div style="margin-top: 225px;margin-left: 370px;position: absolute;">
-            <div style="font-size: 17px;font-weight: bold;color:#646262">SEX/SEXE</div>
-            <div style="font-size: 15px;color:black;letter-spacing: 2px;font-weight: 400">{{$gender}}</div>
         </div>
 
 
-        <div style="margin-top: 330px;margin-left: 170px;position: absolute;width:100%">
-            <div style="font-size: 20px;font-weight: bold;color:#000000; letter-spacing: 1px">National Identification Number (NIN)</div>
 
-        </div>
-
-        <div style="margin-top: 350px;margin-left: 105px;position: absolute;width:100%;">
-
-            <div style="font-family: 'Signika Negative', sans-serif;font-size: 50px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: 400">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
-        </div>
-
-        <div style="margin-top: 215px;margin-left: 568px;position: absolute;color:black; width: 700px;">
-            <div style="font-family: 'Signika Negative', sans-serif;font-size: 40px;font-weight: bold;color:#000000">NGA</div>
-        </div>
-
-        <div style="margin-top: 263px;margin-left: 560px;position: absolute;color:black;">
-            <div style="font-size: 18px;font-weight: bold;color:#000000">ISSUE DATE</div>
-        </div>
-
-        <div style="margin-top: 285px;margin-left: 545px;position: absolute;color:black; width: 100%;">
-            <div style="font-size: 15px;letter-spacing:2px;color:#000000">{{$day}}&nbsp;&nbsp; {{$month[$mtn]}}&nbsp;&nbsp; {{$yr}} </div>
-        </div>
-
-
-        <div style="position: absolute">
-            <img src="{{$qrcode}}" style="margin-top: 32px;margin-left: 504px;width:180px;height:170px">
-        </div>
-
-        <img src="{{url2()}}/image-000.jpg" style="width: 100%;">
     </div>
+
+    <div style="margin-top: 225px;margin-left: 370px;position: absolute;">
+        <div style="font-size: 17px;font-weight: bold;color:#646262">SEX/SEXE</div>
+        <div style="font-size: 15px;color:black;letter-spacing: 2px;font-weight: lighter">{{$gender}}</div>
+    </div>
+
+
+    <div style="margin-top: 330px;margin-left: 170px;position: absolute;width:100%">
+        <div style="font-size: 20px;font-weight: bold;color:#000000; letter-spacing: 1px">National Identification Number (NIN)</div>
+
+    </div>
+
+    <div style="margin-top: 350px;margin-left: 105px;position: absolute;width:100%;">
+
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 50px;margin-top: 0px;color:black;letter-spacing: 6px;font-weight: 400">{{$first_nin}}&nbsp;&nbsp; {{$second_nin}}&nbsp;&nbsp; {{$third_nin}}</div>
+    </div>
+
+    <div style="margin-top: 215px;margin-left: 568px;position: absolute;color:black; width: 700px;">
+        <div style="font-family: 'Signika Negative', sans-serif;font-size: 40px;font-weight: bold;color:#000000">NGA</div>
+    </div>
+
+    <div style="margin-top: 263px;margin-left: 560px;position: absolute;color:black;">
+        <div style="font-size: 18px;font-weight: bold;color:#000000">ISSUE DATE</div>
+    </div>
+
+    <div style="margin-top: 285px;margin-left: 545px;position: absolute;color:black; width: 100%;">
+        <div style="font-size: 15px;letter-spacing:2px;color:#000000">{{$day}}&nbsp;&nbsp; {{$month[$mtn]}}&nbsp;&nbsp; {{$yr}} </div>
+    </div>
+
+
+    <div style="position: absolute">
+        <img src="{{$qrcode}}" style="margin-top: 32px;margin-left: 504px;width:180px;height:170px">
+    </div>
+
+    <img src="{{url2()}}/image-000.jpg" style="width: 100%;">
+</div>
 <div class="id-card-tag-strip"></div>
 <div class="id-card-hook"></div>
 <div class="id-card-holder">
