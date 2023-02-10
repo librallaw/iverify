@@ -265,7 +265,7 @@
 
                 <div style="margin-top: 20px;">
                     <div class="title_name">GIVEN NAMES/PRENOMS</div>
-                    <div class="sub_name">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
+                    <div class="sub_name" style="width:500px;">{{$middlename}}<span style="font-size: 18px;">,</span>  {{$firstname}}</div>
                 </div>
 
                 <div style="margin-top: 20px">
